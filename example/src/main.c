@@ -1,6 +1,8 @@
 #include <tx.h>
 
 int main() {
-    txPrint("Hello, world!");
+    txCursor(10, 10);
+    txPrint("Hello, world!\n");
+
     return 0;
 }
