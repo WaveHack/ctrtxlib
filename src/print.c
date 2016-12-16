@@ -3,21 +3,25 @@
 #include <tx/cursor.h>
 #include <tx/print.h>
 
-void txPrint(const char *format, ...) {
+int txPrint(const char *format, ...) {
+    int ret;
     va_list args;
     va_start(args, format);
 
-    vprintf(format, args);
+    ret = vprintf(format, args);
 
     va_end(args);
+    return ret;
 }
 
-void txPrintAt(unsigned int row, unsigned int col, const char *format, ...) {
+int txPrintAt(unsigned int row, unsigned int col, const char *format, ...) {
+    int ret;
     va_list args;
     va_start(args, format);
 
     txCursor(row, col);
-    vprintf(format, args);
+    ret = vprintf(format, args);
 
     va_end(args);
+    return ret;
 }
