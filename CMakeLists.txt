@@ -11,4 +11,6 @@ include_directories(include)
 
 set(SOURCE_FILES src/print.c)
 
-add_library(ctrtx ${SOURCE_FILES})
+add_library(ctrtx STATIC ${SOURCE_FILES})
+
+set_target_properties(ctrtx PROPERTIES COMPILE_FLAGS "-m32" LINK_FLAGS "-m32")
