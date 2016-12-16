@@ -1,6 +1,6 @@
 #pragma once
 
-// void txClearScreen();
+void txClearScreen();
 // void txClearLine();
 
 // void txNewLine();

@@ -1,10 +1,17 @@
 #include <tx.h>
 
 int main() {
-    txCursor(10, 10);
-    txPrint("Hello, world!\n");
+    txClearScreen();
 
-    txPrintAt(11, 10, "txPrintAt()");
+    txCursor(2, 2);
+    txPrint("ctrtxlib example project");
+
+    txCursor(4, 4);
+    txPrint("txCursor()");
+
+    txPrintAt(5, 4, "txPrintAt()");
+
+    txPrint("\n\ndone");
 
     return 0;
 }
