@@ -1,6 +1,6 @@
 # libctrtx - CTR Text Library
 
-Library with console text helper functions.
+Library with console text helper functions for 3DS homebrew development.
 
 *-under construction-*
 
