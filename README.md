@@ -1,8 +1,8 @@
 # libctrtx - CTR Text Library
 
-Library with console text helper functions for 3DS homebrew development.
+Library with console text helper functions for Nintendo 3DS homebrew development.
 
-*-under construction-*
+It's basically a collection of wrapper functions for a few [ANSI CSI codes](https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_codes) that [ctrulib](https://github.com/smealum/ctrulib) can use with printf.
 
 ## License
 
