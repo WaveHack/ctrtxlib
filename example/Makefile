@@ -7,12 +7,20 @@ RM = rm -f
 SOURCES = src/main.c
 OBJECTS = $(SOURCES:src/%.c=obj/%.o)
 
-$(TARGET): $(OBJECTS)
+all: $(TARGET)
+
+$(TARGET): $(OBJECTS) bin
 	$(CC) -o $@ $< $(LDFLAGS)
 
-obj/%.o: src/%.c
+obj/%.o: src/%.c obj
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 .PHONY: clean
 clean:
 	$(RM) $(TARGET) $(OBJECTS)
+
+bin:
+	mkdir $@
+
+obj:
+	mkdir $@
